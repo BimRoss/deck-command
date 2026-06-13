@@ -7,15 +7,15 @@ Operator types `/deck pitch` or `/deck doc` in a Slack thread. The engine reads 
 
 ## Repo layout
 - `template/deck.html` — the deck template (dark, Inter, no footer branding)
-- `engine/render.mjs` — takes `deck.json` → writes `decks/<slug>/index.html`
+- `engine/render.mjs` — takes `deck.json` → writes `<slug>/index.html`
 - `engine/prompt.md` — the LLM prompt for thread → deck.json
 - `engine/schema.json` — JSON schema the LLM output must match
-- `decks/<slug>/` — generated deck instances (JSON source + rendered HTML)
+- `<slug>/` — generated deck instances (JSON source + rendered HTML)
 - `index.html` — landing page at `decks.makeacompany.ai/`
 
 ## Render a deck locally
 ```
-node engine/render.mjs decks/<slug>/deck.json
+node engine/render.mjs <slug>/deck.json
 ```
 
 ## v1 status

@@ -55,8 +55,8 @@ if (!deck.slug) {
   console.error('deck.json missing required "slug" field');
   process.exit(1);
 }
-const outDir = join(ROOT, 'decks', deck.slug);
+const outDir = join(ROOT, deck.slug);
 mkdirSync(outDir, { recursive: true });
 const html = render(deck);
 writeFileSync(join(outDir, 'index.html'), html);
-console.log(`wrote decks/${deck.slug}/index.html`);
+console.log(`wrote ${deck.slug}/index.html`);
