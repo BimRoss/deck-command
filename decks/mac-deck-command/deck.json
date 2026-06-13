@@ -1,0 +1,69 @@
+{
+  "slug": "mac-deck-command",
+  "title": "MaC competes by orchestrating, not cloning",
+  "subtitle": "A Slack-thread conversation that became a v1 product spec in 40 minutes.",
+  "tone": "pitch",
+  "date": "2026-06-13",
+  "slides": [
+    {
+      "title": "The question we started with",
+      "bullets": [
+        "Can MaC compete with Figma, Lovable, and Gamma by building our own versions?",
+        "Yes technically. No strategically. Here's why."
+      ]
+    },
+    {
+      "title": "MaC is not a tool. MaC is the operator.",
+      "bullets": [
+        "Figma, Lovable, and Gamma each spent years optimizing one workflow with one UI.",
+        "If MaC ships MaC's Figma, MaC becomes a worse Figma.",
+        "The pitch dilutes the second we become four products instead of one operator."
+      ],
+      "quote": {
+        "text": "MaC uses Figma when Figma's the right call, ships HTML when HTML's the right call, fires up Gamma when a deck is faster.",
+        "author": "Ross"
+      }
+    },
+    {
+      "title": "Find the seams. Build the wedge.",
+      "bullets": [
+        "Don't compete head-on with point tools.",
+        "Find the moments where the existing tools annoy MaC users.",
+        "Build the narrow slice that closes the gap and makes the existing tools more valuable, not less."
+      ]
+    },
+    {
+      "title": "The wedge: /deck",
+      "bullets": [
+        "Type /deck pitch in any Slack thread. Get back a hosted deck and a PDF.",
+        "The brief is the thread. We skip the four steps Gamma makes you take.",
+        "Demoable in the same channel where it was built."
+      ],
+      "quote": {
+        "text": "Watch this Slack conversation become a deck in 30 seconds.",
+        "author": "Ross"
+      }
+    },
+    {
+      "title": "Decisions locked at trigger time",
+      "bullets": [
+        "No footer branding. The shared URL looks like the operator made it.",
+        "Any Slack workspace MaC is installed in. No pilot gating.",
+        "Operator picks tone at trigger time: /deck pitch or /deck doc."
+      ]
+    },
+    {
+      "title": "v1 ships in 2 days. v0 demo is this page.",
+      "bullets": [
+        "Engine: thread to deck JSON via Claude. Half a day.",
+        "Renderer: HTML template plus per-deck slug on Cloudflare Pages. Reuses the coultonventures-site stack.",
+        "PDF: headless Chromium pass over the HTML. Few hours.",
+        "Slack command wiring: harness already handles slash commands. Half a day."
+      ],
+      "quote": {
+        "text": "Build v1.",
+        "author": "John"
+      }
+    }
+  ]
+}

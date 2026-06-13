@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{SUBTITLE}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{SUBTITLE}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://decks.makeacompany.ai/{{SLUG}}/">
+<meta property="og:image" content="https://decks.makeacompany.ai/{{SLUG}}/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<style>
+:root{
+  --bg:#0a0a0a;
+  --panel:#111;
+  --line:rgba(255,255,255,.08);
+  --ink:#f5f5f5;
+  --dim:#888;
+  --accent:#e5e5e5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-feature-settings:'ss01','cv11';-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{min-height:100vh;padding:64px 24px 96px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto}
+.meta{display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-family:'JetBrains Mono',ui-monospace,monospace;margin-bottom:48px}
+.meta .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#e5e5e5;margin-right:8px;vertical-align:middle}
+header{margin-bottom:80px}
+h1{font-size:clamp(40px,7vw,72px);font-weight:600;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
+header .sub{color:var(--dim);font-size:clamp(16px,2vw,18px);max-width:640px}
+.slide{border-top:1px solid var(--line);padding:48px 0;display:grid;grid-template-columns:80px 1fr;gap:24px}
+.slide .num{color:var(--dim);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.08em;padding-top:8px}
+.slide h2{font-size:clamp(24px,3.5vw,32px);font-weight:600;letter-spacing:-.02em;margin-bottom:24px;line-height:1.15}
+.slide ul{list-style:none;margin:0;padding:0}
+.slide li{position:relative;padding-left:24px;margin-bottom:14px;font-size:17px;color:var(--ink);max-width:720px}
+.slide li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--accent)}
+.slide blockquote{border-left:2px solid var(--accent);padding:8px 0 8px 20px;margin-top:24px;color:var(--dim);font-style:italic;font-size:15px;max-width:680px}
+.slide blockquote cite{display:block;margin-top:6px;color:var(--dim);font-style:normal;font-size:12px;letter-spacing:.04em;font-family:'JetBrains Mono',ui-monospace,monospace}
+@media (max-width:640px){
+  body{padding:40px 20px 64px}
+  .slide{grid-template-columns:1fr;gap:8px}
+  .slide .num{padding-top:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="meta">
+    <span><span class="dot"></span>DECK / {{TONE}}</span>
+    <span>{{DATE}}</span>
+  </div>
+  <header>
+    <h1>{{TITLE}}</h1>
+    <p class="sub">{{SUBTITLE}}</p>
+  </header>
+  <main>
+    {{SLIDES}}
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaC competes by orchestrating, not cloning</title>
+<meta name="description" content="A Slack-thread conversation that became a v1 product spec in 40 minutes.">
+<meta property="og:title" content="MaC competes by orchestrating, not cloning">
+<meta property="og:description" content="A Slack-thread conversation that became a v1 product spec in 40 minutes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://decks.makeacompany.ai/mac-deck-command/">
+<meta property="og:image" content="https://decks.makeacompany.ai/mac-deck-command/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<style>
+:root{
+  --bg:#0a0a0a;
+  --panel:#111;
+  --line:rgba(255,255,255,.08);
+  --ink:#f5f5f5;
+  --dim:#888;
+  --accent:#e5e5e5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-feature-settings:'ss01','cv11';-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{min-height:100vh;padding:64px 24px 96px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto}
+.meta{display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-family:'JetBrains Mono',ui-monospace,monospace;margin-bottom:48px}
+.meta .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#e5e5e5;margin-right:8px;vertical-align:middle}
+header{margin-bottom:80px}
+h1{font-size:clamp(40px,7vw,72px);font-weight:600;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
+header .sub{color:var(--dim);font-size:clamp(16px,2vw,18px);max-width:640px}
+.slide{border-top:1px solid var(--line);padding:48px 0;display:grid;grid-template-columns:80px 1fr;gap:24px}
+.slide .num{color:var(--dim);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.08em;padding-top:8px}
+.slide h2{font-size:clamp(24px,3.5vw,32px);font-weight:600;letter-spacing:-.02em;margin-bottom:24px;line-height:1.15}
+.slide ul{list-style:none;margin:0;padding:0}
+.slide li{position:relative;padding-left:24px;margin-bottom:14px;font-size:17px;color:var(--ink);max-width:720px}
+.slide li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--accent)}
+.slide blockquote{border-left:2px solid var(--accent);padding:8px 0 8px 20px;margin-top:24px;color:var(--dim);font-style:italic;font-size:15px;max-width:680px}
+.slide blockquote cite{display:block;margin-top:6px;color:var(--dim);font-style:normal;font-size:12px;letter-spacing:.04em;font-family:'JetBrains Mono',ui-monospace,monospace}
+@media (max-width:640px){
+  body{padding:40px 20px 64px}
+  .slide{grid-template-columns:1fr;gap:8px}
+  .slide .num{padding-top:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="meta">
+    <span><span class="dot"></span>DECK / PITCH</span>
+    <span>2026-06-13</span>
+  </div>
+  <header>
+    <h1>MaC competes by orchestrating, not cloning</h1>
+    <p class="sub">A Slack-thread conversation that became a v1 product spec in 40 minutes.</p>
+  </header>
+  <main>
+      <section class="slide">
+    <div class="num">01</div>
+    <div>
+      <h2>The question we started with</h2>
+      <ul>
+      <li>Can MaC compete with Figma, Lovable, and Gamma by building our own versions?</li>
+      <li>Yes technically. No strategically. Here's why.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide">
+    <div class="num">02</div>
+    <div>
+      <h2>MaC is not a tool. MaC is the operator.</h2>
+      <ul>
+      <li>Figma, Lovable, and Gamma each spent years optimizing one workflow with one UI.</li>
+      <li>If MaC ships MaC's Figma, MaC becomes a worse Figma.</li>
+      <li>The pitch dilutes the second we become four products instead of one operator.</li>
+      </ul>
+    <blockquote>MaC uses Figma when Figma's the right call, ships HTML when HTML's the right call, fires up Gamma when a deck is faster.<cite>Ross</cite></blockquote>
+    </div>
+  </section>
+  <section class="slide">
+    <div class="num">03</div>
+    <div>
+      <h2>Find the seams. Build the wedge.</h2>
+      <ul>
+      <li>Don't compete head-on with point tools.</li>
+      <li>Find the moments where the existing tools annoy MaC users.</li>
+      <li>Build the narrow slice that closes the gap and makes the existing tools more valuable, not less.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide">
+    <div class="num">04</div>
+    <div>
+      <h2>The wedge: /deck</h2>
+      <ul>
+      <li>Type /deck pitch in any Slack thread. Get back a hosted deck and a PDF.</li>
+      <li>The brief is the thread. We skip the four steps Gamma makes you take.</li>
+      <li>Demoable in the same channel where it was built.</li>
+      </ul>
+    <blockquote>Watch this Slack conversation become a deck in 30 seconds.<cite>Ross</cite></blockquote>
+    </div>
+  </section>
+  <section class="slide">
+    <div class="num">05</div>
+    <div>
+      <h2>Decisions locked at trigger time</h2>
+      <ul>
+      <li>No footer branding. The shared URL looks like the operator made it.</li>
+      <li>Any Slack workspace MaC is installed in. No pilot gating.</li>
+      <li>Operator picks tone at trigger time: /deck pitch or /deck doc.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide">
+    <div class="num">06</div>
+    <div>
+      <h2>v1 ships in 2 days. v0 demo is this page.</h2>
+      <ul>
+      <li>Engine: thread to deck JSON via Claude. Half a day.</li>
+      <li>Renderer: HTML template plus per-deck slug on Cloudflare Pages. Reuses the coultonventures-site stack.</li>
+      <li>PDF: headless Chromium pass over the HTML. Few hours.</li>
+      <li>Slack command wiring: harness already handles slash commands. Half a day.</li>
+      </ul>
+    <blockquote>Build v1.<cite>John</cite></blockquote>
+    </div>
+  </section>
+  </main>
+</div>
+</body>
+</html>
