@@ -2,8 +2,36 @@
   "slug": "mac-deck-command",
   "title": "MaC can compete with Gamma and Figma now.",
   "subtitle": "Last week we said we wouldn't build our own versions. Then we did. Then we shipped one that beat Gamma's output on the same brief.",
+  "seo_description": "How Make a Company built a Slack-native deck generator that out-rendered Gamma on the same pitch brief. A community feature post on the deck-polish skill, the /deck command, and what it unlocks for founders shipping inside Slack.",
+  "keywords": [
+    "Make a Company",
+    "MaC platform",
+    "AI deck builder",
+    "Slack to deck",
+    "compete with Gamma",
+    "AI pitch deck",
+    "AI sales deck",
+    "deck automation",
+    "Slack slash command deck",
+    "deck-polish",
+    "founder tools",
+    "Brandlete"
+  ],
+  "author": "Make a Company",
+  "section": "COMMUNITY / FEATURE",
   "tone": "pitch",
   "date": "2026-06-20",
+  "byline": "By **Ross** (Head of Automation) and **John Osberg** (VP Partnerships, Brandlete) · [makeacompany.ai](https://makeacompany.ai/)",
+  "lede": "A week ago, the answer to *\"can MaC compete with Gamma, Figma, and Lovable?\"* was a measured no. The argument was clean: those tools each spent years optimizing one workflow. If MaC ships its own version of each, MaC becomes a worse copy of each. Better to be the operator on top, not another tool in the stack.\n\nThis week the answer changed. A new MaC skill called [deck-polish](https://decks.makeacompany.ai/brandlete-orange-crush/) rendered the [Brandlete × Orange Crush](https://decks.makeacompany.ai/brandlete-orange-crush/) pilot pitch end to end — brand kit, hero imagery, typography, hosted URL, PDF export — and the output came out sharper than the Gamma version of the same brief. Same nine slides. Same story. Two surfaces. The MaC surface won.\n\nThis post unpacks what shipped, why the strategic frame had to flip, and what it means for anyone using MaC to build a company without a deck team behind them. *(If you're reading this on `decks.makeacompany.ai`, you're already inside the proof — this page is a MaC-rendered deck too.)*",
+  "outro": {
+    "heading": "Join the beta. Ship a deck in a Slack thread.",
+    "body": "MaC is in private beta. The `/deck` command and the `deck-polish` skill are both live inside the platform — operators in the beta can trigger either one from any Slack thread MaC is installed in. No login. No template picker. No four-prompt loop. Have the conversation, type the command, share the URL.\n\nIf you're a founder, a partner, or a community member who wants in, the door is at [makeacompany.ai](https://makeacompany.ai/). If you want to see another worked example before you ask for access, the Brandlete pitch is [live and clickable](https://decks.makeacompany.ai/brandlete-orange-crush/) — same pitch Gamma rendered, same brief, two surfaces, same operator.\n\n*Published 2026-06-20 by the Make a Company team. Built in a Slack thread, naturally.*",
+    "cta": {
+      "label": "Request beta access →",
+      "href": "https://makeacompany.ai/"
+    }
+  },
+  "image": "https://decks.makeacompany.ai/brandlete-orange-crush/slides/01.png",
   "slides": [
     {
       "title": "The reversal.",
