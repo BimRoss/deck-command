@@ -3,27 +3,172 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>decks.makeacompany.ai</title>
-<meta name="description" content="MaC decks. Generated from Slack threads via /deck.">
-<link rel="preconnect" href="https://rsms.me/">
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<title>decks.makeacompany.ai — decks from Slack threads</title>
+<meta name="description" content="Polished decks rendered from MaC Slack conversations via /deck. Side-by-side with Gamma.">
+<meta property="og:title" content="decks.makeacompany.ai">
+<meta property="og:description" content="Polished decks rendered from MaC Slack conversations via /deck.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://decks.makeacompany.ai/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
+:root{
+  --bg:#0A0F1A;
+  --bg-card:#141B28;
+  --accent:#4A90E2;
+  --accent-soft:rgba(74,144,226,.15);
+  --text:#FFFFFF;
+  --text-muted:#A9B3C2;
+  --text-dim:#6E7787;
+  --border:rgba(255,255,255,.08);
+  --serif:'Lora','Georgia',serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#0a0a0a;color:#f5f5f5;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-body{min-height:100vh;display:grid;place-items:center;padding:40px;line-height:1.5}
-.wrap{max-width:560px;text-align:center}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#e5e5e5;margin-bottom:24px}
-h1{font-size:clamp(28px,5vw,40px);font-weight:600;letter-spacing:-.02em;margin-bottom:16px}
-p{color:#888;font-size:16px;margin-bottom:24px}
-code{font-family:'JetBrains Mono',ui-monospace,monospace;background:rgba(255,255,255,.06);padding:2px 8px;border-radius:4px;font-size:14px}
+html,body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.5}
+body{
+  min-height:100vh;padding:64px 32px 96px;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(74,144,226,.10), transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(74,144,226,.06), transparent 50%),
+    var(--bg);
+}
+.wrap{max-width:1080px;margin:0 auto}
+.meta{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--text-dim);font-family:'JetBrains Mono',ui-monospace,monospace;
+  margin-bottom:64px;
+}
+.meta .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:10px;vertical-align:middle;box-shadow:0 0 12px var(--accent)}
+header{margin-bottom:80px;max-width:760px}
+.eyebrow{
+  display:inline-block;background:var(--accent);color:#fff;
+  font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  padding:7px 14px;border-radius:999px;margin-bottom:32px;
+}
+h1{
+  font-family:var(--serif);
+  font-size:clamp(40px,6vw,72px);
+  font-weight:700;line-height:1.05;letter-spacing:-.015em;margin-bottom:24px;
+}
+header p{color:var(--text-muted);font-size:clamp(17px,1.6vw,20px);max-width:640px}
+header code{
+  font-family:'JetBrains Mono',ui-monospace,monospace;
+  background:var(--accent-soft);color:var(--accent);
+  padding:2px 10px;border-radius:6px;font-size:.92em;font-weight:600;
+}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:80px}
+.card{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:16px;
+  padding:36px;display:flex;flex-direction:column;gap:18px;
+  text-decoration:none;color:inherit;transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  position:relative;overflow:hidden;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 18px 50px rgba(74,144,226,.12)}
+.card .tag{
+  font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);
+}
+.card h2{
+  font-family:var(--serif);font-size:28px;font-weight:600;line-height:1.15;letter-spacing:-.01em;
+}
+.card p{color:var(--text-muted);font-size:15px;line-height:1.55}
+.card .footnote{
+  font-size:12px;color:var(--text-dim);font-family:'JetBrains Mono',ui-monospace,monospace;
+  letter-spacing:.06em;margin-top:auto;padding-top:12px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.card .footnote .arrow{color:var(--accent);font-size:18px}
+.card.featured{
+  grid-column:1 / -1;
+  background:linear-gradient(135deg, rgba(74,144,226,.10), transparent 60%), var(--bg-card);
+  border-color:rgba(74,144,226,.3);
+}
+.card.featured .tag{color:#fff;background:var(--accent);padding:4px 10px;border-radius:999px;align-self:flex-start}
+.card.featured h2{font-size:36px;max-width:760px}
+.card.featured p{max-width:760px;font-size:17px}
+.section-head{
+  font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border);
+}
+.howto{
+  margin-top:64px;padding:36px;border:1px solid var(--border);
+  border-radius:16px;background:rgba(255,255,255,.02);
+}
+.howto h3{
+  font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:14px;
+}
+.howto p{color:var(--text-muted);font-size:16px;margin-bottom:18px;max-width:720px}
+.howto ol{margin-left:24px;color:var(--text-muted);font-size:15px}
+.howto ol li{margin-bottom:8px}
+.howto code{
+  font-family:'JetBrains Mono',ui-monospace,monospace;
+  background:var(--accent-soft);color:var(--accent);
+  padding:2px 8px;border-radius:5px;font-size:.92em;font-weight:600;
+}
+footer{
+  margin-top:96px;padding-top:32px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:var(--text-dim);
+  font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;
+}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+@media (max-width:720px){
+  .grid{grid-template-columns:1fr}
+  .card.featured h2{font-size:28px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="dot"></div>
-  <h1>MaC decks</h1>
-  <p>Decks generated from Slack threads. Type <code>/deck pitch</code> or <code>/deck doc</code> in any MaC-connected thread.</p>
-  <p>Each deck lives at its own URL. There's no index.</p>
+  <div class="meta">
+    <span><span class="dot"></span>decks.makeacompany.ai</span>
+    <span>Powered by /deck</span>
+  </div>
+
+  <header>
+    <span class="eyebrow">Portfolio</span>
+    <h1>Decks from Slack threads.</h1>
+    <p>Polished pitch and strategy decks rendered straight from MaC conversations. Type <code>/deck pitch</code> in any thread we live in. Get back a hosted URL and a PDF.</p>
+  </header>
+
+  <div class="section-head">Live decks</div>
+
+  <div class="grid">
+
+    <a class="card featured" href="/brandlete-orange-crush/">
+      <span class="tag">Sales pitch · Sept 2026</span>
+      <h2>Orange Crush × Brandlete — Founding Partnership Opportunity</h2>
+      <p>The Brandlete x Orange Crush founding-partner pitch. Same content Gamma rendered for the team, rebuilt through /deck. Navy serif palette, brand pills, stat anchors, Brian Lehman contact close. Built to clear the polish bar partners actually evaluate against.</p>
+      <span class="footnote"><span>/deck pitch — 9 slides</span><span class="arrow">→</span></span>
+    </a>
+
+    <a class="card" href="/mac-deck-command/">
+      <span class="tag">Strategy memo · June 13</span>
+      <h2>MaC competes by orchestrating, not cloning.</h2>
+      <p>The Slack conversation behind the /deck product, captured as a deck. Typography-first, no photography, six slides plus a side-by-side with the Gamma comparison.</p>
+      <span class="footnote"><span>/deck pitch — 8 slides</span><span class="arrow">→</span></span>
+    </a>
+
+  </div>
+
+  <div class="howto">
+    <h3>How /deck works</h3>
+    <p>Each deck on this site started as a Slack thread. The brief is the conversation, not a prompt-engineering session.</p>
+    <ol>
+      <li>Have the conversation in a MaC-connected Slack thread.</li>
+      <li>Type <code>/deck pitch</code> for sales tone or <code>/deck doc</code> for strategy tone.</li>
+      <li>Get back a hosted URL like the ones above. Share, edit, screenshot, ship.</li>
+    </ol>
+  </div>
+
+  <footer>
+    <span>Make a Company · <a href="https://makeacompany.ai">makeacompany.ai</a></span>
+    <span>BimRoss/deck-command</span>
+  </footer>
 </div>
 </body>
 </html>

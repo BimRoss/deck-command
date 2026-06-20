@@ -53,7 +53,7 @@
       ]
     },
     {
-      "title": "v1 ships in 2 days. v0 demo is this page.",
+      "title": "v1 shipped in 2 hours. v0 demo is this page.",
       "bullets": [
         "Engine: thread to deck JSON via Claude. Half a day.",
         "Renderer: HTML template plus per-deck slug on Cloudflare Pages. Reuses the coultonventures-site stack.",
@@ -64,6 +64,27 @@
         "text": "Build v1.",
         "author": "John"
       }
+    },
+    {
+      "title": "Side by side with Gamma. Same pitch.",
+      "bullets": [
+        "Gamma rendered the Brandlete x Orange Crush pilot pitch in 9 slides over four prompts.",
+        "/deck rendered the same pitch from one Slack conversation. Hosted at decks.makeacompany.ai/brandlete-orange-crush/.",
+        "Same story. Two aesthetics. Operator picks the surface, not the tool."
+      ],
+      "quote": {
+        "text": "See it live: decks.makeacompany.ai/brandlete-orange-crush/",
+        "author": "live"
+      }
+    },
+    {
+      "title": "The bet behind /deck.",
+      "bullets": [
+        "Polish tools optimize the slide. /deck optimizes the path from thought to slide.",
+        "Gamma's loop: open Gamma, type a prompt, edit, export, share.",
+        "/deck's loop: have the conversation, type /deck, share the URL.",
+        "The deck wasn't the work. The thinking was. /deck just ships the thinking, dressed up."
+      ]
     }
   ]
 }
