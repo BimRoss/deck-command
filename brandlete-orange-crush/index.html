@@ -9,418 +9,83 @@
 <meta property="og:description" content="WNY's #1 club lacrosse, meet the platform built for clubs like yours.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://decks.makeacompany.ai/brandlete-orange-crush/">
+<meta property="og:image" content="https://decks.makeacompany.ai/brandlete-orange-crush/slides/01.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#1A212E;
-  --bg-deep:#11161F;
-  --bg-card:#28303C;
+  --bg:#0A0F1A;
+  --bg-card:#141B28;
   --accent:#4A90E2;
-  --accent-soft:rgba(74,144,226,.18);
-  --accent-glow:rgba(74,144,226,.35);
   --text:#FFFFFF;
   --text-muted:#A9B3C2;
   --text-dim:#6E7787;
   --border:rgba(255,255,255,.08);
-  --serif:'Lora','Georgia',serif;
-  --sans:'Inter',system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{
   background:var(--bg);
   color:var(--text);
-  font-family:var(--sans);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
-  scroll-behavior:smooth;
-}
-.deck{display:flex;flex-direction:column}
-.slide{
-  min-height:100vh;
-  padding:80px 96px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  position:relative;
-  border-bottom:1px solid var(--border);
-  background:radial-gradient(ellipse at 70% 30%, rgba(74,144,226,.06), transparent 60%);
-}
-.slide.cover{
-  background:
-    radial-gradient(ellipse at center, rgba(74,144,226,.12) 0%, transparent 55%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
-  padding:96px;
-  align-items:center;
-  text-align:center;
-  justify-content:center;
-  gap:48px;
-}
-.eyebrow{
-  display:inline-block;
-  background:var(--accent);
-  color:#fff;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  padding:8px 16px;
-  border-radius:999px;
-  align-self:flex-start;
-}
-.cover .eyebrow{align-self:center}
-h1.cover-title{
-  font-family:var(--serif);
-  font-size:clamp(48px,7vw,84px);
-  font-weight:700;
-  line-height:1.05;
-  letter-spacing:-.01em;
-  max-width:1100px;
-  margin:0 auto;
-}
-.cover .sub{
-  font-size:clamp(18px,2vw,22px);
-  color:var(--text-muted);
-  max-width:760px;
   line-height:1.5;
-  font-weight:400;
-  margin:0 auto;
 }
-.cover .logos{
-  display:flex;align-items:center;gap:48px;
-  font-family:var(--serif);font-size:42px;font-weight:600;
-}
-.cover .logo-crush{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:140px;height:140px;border-radius:50%;
-  background:radial-gradient(circle at 30% 30%, #ff8c3a, #e85d12 60%, #b53d00);
-  box-shadow:0 12px 40px rgba(232,93,18,.4), inset 0 -8px 24px rgba(0,0,0,.3);
-  color:#fff;font-family:var(--sans);font-weight:700;font-size:20px;
-  letter-spacing:.04em;text-transform:uppercase;line-height:1;
-  text-align:center;border:3px solid #fff;
-}
-.cover .logo-crush span{display:block;font-size:24px;letter-spacing:.02em}
-.cover .logo-crush small{display:block;font-size:11px;letter-spacing:.12em;margin-top:4px;opacity:.9}
-.cover .x{font-family:var(--sans);font-size:48px;color:var(--text-muted);font-weight:300}
-.cover .logo-brandlete{
-  display:inline-flex;align-items:center;gap:14px;
-  color:var(--text);font-family:var(--sans);font-weight:700;font-size:38px;letter-spacing:-.02em;
-}
-.cover .logo-brandlete .shoe{
-  width:64px;height:64px;background:var(--accent);
-  -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M3 16c0-1 .5-2 1.5-2.5L8 12V8c0-1.5 1-2 2-2h2c1 0 2 .5 2 2v3l5 2c1.5.6 3 2 3 4v1H3v-2z'/></svg>") center/contain no-repeat;
-          mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M3 16c0-1 .5-2 1.5-2.5L8 12V8c0-1.5 1-2 2-2h2c1 0 2 .5 2 2v3l5 2c1.5.6 3 2 3 4v1H3v-2z'/></svg>") center/contain no-repeat;
-}
-.audience-pills{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:8px;
-}
-.audience-pills .pill{
-  padding:10px 20px;border:1px solid var(--accent);
-  color:var(--text);font-size:11px;font-weight:600;
-  letter-spacing:.16em;text-transform:uppercase;
-  border-radius:999px;background:rgba(74,144,226,.06);
-}
-.content-grid{
-  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
-  gap:96px;align-items:center;flex:1;padding-top:32px;
-}
-.content-grid.no-stat{grid-template-columns:1fr;max-width:920px}
-.title-block{display:flex;flex-direction:column;gap:24px}
-h2.slide-title{
-  font-family:var(--serif);
-  font-size:clamp(40px,5.2vw,64px);
-  font-weight:700;
-  line-height:1.08;
-  letter-spacing:-.015em;
-  color:var(--text);
-}
-.slide-body{
-  font-size:19px;line-height:1.55;color:var(--text-muted);max-width:620px;
-}
-.closer{
-  margin-top:8px;font-size:18px;font-weight:600;color:var(--accent);
-  line-height:1.4;max-width:620px;
-}
-.stat-panel{
-  display:flex;flex-direction:column;align-items:flex-end;gap:16px;text-align:right;
-  border-left:1px solid var(--border);padding-left:64px;
-}
-.stat-panel .label{
-  font-size:10px;font-weight:600;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--accent);
-}
-.stat-panel .number{
-  font-family:var(--serif);
-  font-size:clamp(72px,9vw,128px);
-  font-weight:700;color:var(--text);line-height:.9;letter-spacing:-.02em;
-}
-.stat-panel .number small{font-size:.5em;font-weight:600;vertical-align:baseline;margin-left:4px}
-.stat-panel .caption{font-size:15px;color:var(--text-muted);max-width:280px;line-height:1.45}
-.stat-panel .source{font-size:11px;color:var(--text-dim);font-style:italic;margin-top:8px}
-.slide-foot{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-top:auto;padding-top:48px;
-}
-.slide-foot .marks{
-  display:flex;align-items:center;gap:18px;color:var(--text-dim);
-  font-size:13px;
-}
-.slide-foot .marks .mini-crush{
-  width:28px;height:28px;border-radius:50%;
-  background:radial-gradient(circle at 30% 30%, #ff8c3a, #e85d12 60%);
-  display:inline-flex;align-items:center;justify-content:center;
-  font-size:8px;font-weight:700;color:#fff;letter-spacing:.05em;
-  border:1.5px solid #fff;
-}
-.slide-foot .marks .mini-shoe{
-  width:32px;height:32px;background:var(--accent);
-  -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M3 16c0-1 .5-2 1.5-2.5L8 12V8c0-1.5 1-2 2-2h2c1 0 2 .5 2 2v3l5 2c1.5.6 3 2 3 4v1H3v-2z'/></svg>") center/contain no-repeat;
-          mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M3 16c0-1 .5-2 1.5-2.5L8 12V8c0-1.5 1-2 2-2h2c1 0 2 .5 2 2v3l5 2c1.5.6 3 2 3 4v1H3v-2z'/></svg>") center/contain no-repeat;
-}
-.page-num{
-  font-family:'JetBrains Mono',ui-monospace,monospace;
-  font-size:12px;color:var(--text-dim);letter-spacing:.1em;
-}
-
-/* CLOSER slide */
-.slide.closer-slide{
-  text-align:center;align-items:center;justify-content:center;
-  background:
-    radial-gradient(ellipse at center, rgba(74,144,226,.10) 0%, transparent 60%),
-    var(--bg-deep);
-  gap:48px;
-}
-.slide.closer-slide h2.slide-title{
-  max-width:1100px;text-align:center;
-}
-.contact-card{
-  border:1px solid var(--border);background:rgba(255,255,255,.02);
-  border-radius:16px;padding:32px 48px;display:flex;flex-direction:column;
-  align-items:center;gap:6px;
-}
-.contact-card .name{font-size:24px;font-weight:600;color:var(--text)}
-.contact-card .role{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-.contact-card .info{font-size:16px;color:var(--text-muted);font-family:'JetBrains Mono',ui-monospace,monospace}
-
-/* Top nav */
 .topnav{
-  position:fixed;top:0;left:0;right:0;
-  background:rgba(17,22,31,.85);backdrop-filter:blur(20px);
+  position:sticky;top:0;left:0;right:0;
+  background:rgba(10,15,26,.92);
+  backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
-  padding:14px 28px;display:flex;justify-content:space-between;align-items:center;
-  z-index:100;font-size:12px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;
+  padding:14px 28px;
+  display:flex;justify-content:space-between;align-items:center;
+  z-index:100;
+  font-size:12px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;
 }
 .topnav a{color:var(--accent);text-decoration:none;font-weight:600}
 .topnav a:hover{text-decoration:underline}
-
+.topnav strong{color:var(--text)}
+main{padding:32px 0 64px}
+.slide{
+  width:100%;max-width:1400px;margin:0 auto 24px;
+  display:block;line-height:0;
+  border-radius:8px;overflow:hidden;
+  box-shadow:0 8px 40px rgba(0,0,0,.4);
+}
+.slide img{width:100%;height:auto;display:block}
+footer{
+  max-width:1400px;margin:48px auto 0;padding:24px 32px;
+  border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  font-size:12px;color:var(--text-dim);letter-spacing:.08em;text-transform:uppercase;
+}
+footer a{color:var(--accent);text-decoration:none;font-weight:600}
+footer a:hover{text-decoration:underline}
 @media (max-width:840px){
-  .slide{padding:64px 32px}
-  .slide.cover{padding:48px 24px;gap:32px}
-  .content-grid{grid-template-columns:1fr;gap:48px;padding-top:24px}
-  .stat-panel{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:32px;align-items:flex-start;text-align:left}
-  .stat-panel .number{font-size:80px}
-  .cover .logos{flex-direction:column;gap:16px}
-  .cover .x{transform:rotate(90deg);font-size:32px}
-  .topnav{padding:10px 18px;font-size:10px}
+  main{padding:16px 0 32px}
+  .slide{margin-bottom:16px;border-radius:4px}
+  .topnav{padding:10px 16px;font-size:10px}
+  footer{padding:18px 16px;font-size:10px}
 }
 </style>
 </head>
 <body>
 <nav class="topnav">
-  <span>Rendered by <strong style="color:var(--text)">/deck</strong> · <a href="https://decks.makeacompany.ai/">decks.makeacompany.ai</a></span>
+  <span>Hosted by <strong>/deck</strong> · <a href="https://decks.makeacompany.ai/">decks.makeacompany.ai</a></span>
   <span>9 slides · Brandlete × Orange Crush</span>
 </nav>
-<div class="deck">
-
-  <!-- 1: COVER -->
-  <section class="slide cover">
-    <span class="eyebrow">Founding Partnership Opportunity</span>
-    <div class="logos">
-      <span class="logo-crush"><span>CRUSH</span><small>ORANGE</small></span>
-      <span class="x">×</span>
-      <span class="logo-brandlete"><span class="shoe"></span>Brandlete</span>
-    </div>
-    <h1 class="cover-title">WNY's #1 club lacrosse,<br>meet the platform built for clubs like yours.</h1>
-    <div class="audience-pills">
-      <span class="pill">Coaches</span>
-      <span class="pill">Athletes</span>
-      <span class="pill">Parents</span>
-      <span class="pill">Program Leaders</span>
-    </div>
-    <div class="page-num" style="margin-top:16px">01 / 09</div>
-  </section>
-
-  <!-- 2: THE SHIFT -->
-  <section class="slide">
-    <span class="eyebrow">The Shift</span>
-    <div class="content-grid">
-      <div class="title-block">
-        <h2 class="slide-title">Club lacrosse changed.<br>The tooling didn't.</h2>
-        <p class="slide-body">Parents expect visibility. Coaches manage more athletes than ever. College coaches recruit profiles, not just film. The clubs that compound are the ones running a system every coach can execute.</p>
-      </div>
-      <div class="stat-panel">
-        <span class="label">By the numbers</span>
-        <span class="number">1.1M<small>+</small></span>
-        <span class="caption">U.S. youth lacrosse players — fastest growing team sport.</span>
-        <span class="source">US Lacrosse, 2024</span>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div class="marks"><span class="mini-crush">×</span><span class="mini-shoe"></span></div>
-      <span class="page-num">02 / 09</span>
-    </div>
-  </section>
-
-  <!-- 3: WHAT BRANDLETE IS -->
-  <section class="slide">
-    <span class="eyebrow">What Brandlete Is</span>
-    <div class="content-grid">
-      <div class="title-block">
-        <h2 class="slide-title">Athlete development,<br>organized.</h2>
-        <p class="slide-body">One platform that lines up coaches, athletes, parents, and program leaders behind a shared development standard. Less guesswork, more progress every season.</p>
-        <p class="closer">A system, not another app to chase.</p>
-      </div>
-      <div class="stat-panel">
-        <span class="label">By the numbers</span>
-        <span class="number">76<small>%</small></span>
-        <span class="caption">of parents say poor coaching is why kids quit.</span>
-        <span class="source">Aspen Institute · Project Play</span>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div class="marks"><span class="mini-crush">×</span><span class="mini-shoe"></span></div>
-      <span class="page-num">03 / 09</span>
-    </div>
-  </section>
-
-  <!-- 4: FOR COACHES -->
-  <section class="slide">
-    <span class="eyebrow">For Coaches</span>
-    <div class="content-grid">
-      <div class="title-block">
-        <h2 class="slide-title">Your system, packaged so every<br>coach can run it.</h2>
-        <p class="slide-body">Brandlete turns your top coaches' playbooks into reusable, trackable structure across every age group. Less time managing, more time coaching.</p>
-        <p class="closer">Your standard, every field, every season.</p>
-      </div>
-      <div class="stat-panel">
-        <span class="label">By the numbers</span>
-        <span class="number">&lt;30<small>%</small></span>
-        <span class="caption">of youth coaches get any formal training.</span>
-        <span class="source">Aspen Institute · Project Play</span>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div class="marks"><span class="mini-crush">×</span><span class="mini-shoe"></span></div>
-      <span class="page-num">04 / 09</span>
-    </div>
-  </section>
-
-  <!-- 5: FOR ATHLETES -->
-  <section class="slide">
-    <span class="eyebrow">For Athletes</span>
-    <div class="content-grid">
-      <div class="title-block">
-        <h2 class="slide-title">A clear answer to<br>"what do I work on next."</h2>
-        <p class="slide-body">Every athlete leaves a tournament with the next 8 weeks already mapped. The off-season becomes a season. Daily reps, weekly check-ins, season-over-season visible progress.</p>
-        <p class="closer">Every athlete. Every goal. Every season.</p>
-      </div>
-      <div class="stat-panel">
-        <span class="label">By the numbers</span>
-        <span class="number">70<small>%</small></span>
-        <span class="caption">of kids quit organized sports by age 13.</span>
-        <span class="source">National Alliance for Youth Sports</span>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div class="marks"><span class="mini-crush">×</span><span class="mini-shoe"></span></div>
-      <span class="page-num">05 / 09</span>
-    </div>
-  </section>
-
-  <!-- 6: FOR PARENTS -->
-  <section class="slide">
-    <span class="eyebrow">For Parents</span>
-    <div class="content-grid">
-      <div class="title-block">
-        <h2 class="slide-title">Visibility,<br>not just the scoreboard.</h2>
-        <p class="slide-body">Parents see what's being worked on and how their athlete is progressing. Inbound questions drop. Trust goes up. Word-of-mouth follows.</p>
-        <p class="closer">Trust scales the program faster than tournaments.</p>
-      </div>
-      <div class="stat-panel">
-        <span class="label">By the numbers</span>
-        <span class="number">$883</span>
-        <span class="caption">average family spend per child, per year, in club sports.</span>
-        <span class="source">Aspen Institute · State of Play</span>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div class="marks"><span class="mini-crush">×</span><span class="mini-shoe"></span></div>
-      <span class="page-num">06 / 09</span>
-    </div>
-  </section>
-
-  <!-- 7: RECRUITING -->
-  <section class="slide">
-    <span class="eyebrow">Recruiting &amp; College</span>
-    <div class="content-grid">
-      <div class="title-block">
-        <h2 class="slide-title">Profiles college coaches<br>can actually evaluate.</h2>
-        <p class="slide-body">Built into the platform: structured athlete profiles college coaches can find, scan, and act on. Your roster gets seen by the people who matter, not lost in a DM thread.</p>
-        <p class="closer">Make recruiting a workflow, not a favor.</p>
-      </div>
-      <div class="stat-panel">
-        <span class="label">By the numbers</span>
-        <span class="number">7<small>%</small></span>
-        <span class="caption">of high-school athletes go on to play NCAA sports.</span>
-        <span class="source">NCAA Recruiting Fact Sheet</span>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div class="marks"><span class="mini-crush">×</span><span class="mini-shoe"></span></div>
-      <span class="page-num">07 / 09</span>
-    </div>
-  </section>
-
-  <!-- 8: PARTNERSHIP -->
-  <section class="slide">
-    <span class="eyebrow">The Partnership → Next Step</span>
-    <div class="content-grid">
-      <div class="title-block">
-        <h2 class="slide-title">Orange Crush as a<br>founding Power 25 partner.</h2>
-        <p class="slide-body">25 founding clubs nationally. $500 minimum spend over 6 months, with 50% credit applied toward full license upon activation. Set up a 1:1 walkthrough this week.</p>
-        <p class="closer">Founders set the standard. Power 25 sets the market.</p>
-      </div>
-      <div class="stat-panel">
-        <span class="label">By the numbers</span>
-        <span class="number">$30B<small>+</small></span>
-        <span class="caption">annual U.S. youth sports market — and growing.</span>
-        <span class="source">Aspen Institute · WinterGreen Research</span>
-      </div>
-    </div>
-    <div class="slide-foot">
-      <div class="marks"><span class="mini-crush">×</span><span class="mini-shoe"></span></div>
-      <span class="page-num">08 / 09</span>
-    </div>
-  </section>
-
-  <!-- 9: CLOSER -->
-  <section class="slide closer-slide">
-    <span class="eyebrow">Let's Talk</span>
-    <h2 class="slide-title">Ready to make Orange Crush a<br>founding Power 25 partner.</h2>
-    <p class="slide-body" style="max-width:760px;color:var(--text-muted);font-size:20px">Set up your 1:1 walkthrough this week. We'll cover the partnership, the platform, and the WNY pipeline angle in 30 minutes.</p>
-    <a href="https://www.brandlete.com/" class="contact-card" style="text-decoration:none">
-      <span class="role">Founding Partner Program</span>
-      <span class="name">brandlete.com</span>
-      <span class="info">Reach out for a 1:1 walkthrough this week</span>
-    </a>
-    <div class="slide-foot" style="width:100%;max-width:none">
-      <div class="marks"><span class="mini-crush">×</span><span class="mini-shoe"></span></div>
-      <span class="page-num">09 / 09</span>
-    </div>
-  </section>
-
-</div>
+<main>
+  <figure class="slide"><img src="slides/01.png" alt="Slide 1 — Cover: Founding Partnership Opportunity" loading="eager"></figure>
+  <figure class="slide"><img src="slides/02.png" alt="Slide 2 — The Shift: Club lacrosse changed. The tooling didn't." loading="lazy"></figure>
+  <figure class="slide"><img src="slides/03.png" alt="Slide 3 — What Brandlete Is: Athlete development, organized." loading="lazy"></figure>
+  <figure class="slide"><img src="slides/04.png" alt="Slide 4 — For Coaches: Your system, packaged so every coach can run it." loading="lazy"></figure>
+  <figure class="slide"><img src="slides/05.png" alt="Slide 5 — For Athletes: A clear answer to what do I work on next." loading="lazy"></figure>
+  <figure class="slide"><img src="slides/06.png" alt="Slide 6 — For Parents: Visibility, not just the scoreboard." loading="lazy"></figure>
+  <figure class="slide"><img src="slides/07.png" alt="Slide 7 — Recruiting & College: Profiles college coaches can actually evaluate." loading="lazy"></figure>
+  <figure class="slide"><img src="slides/08.png" alt="Slide 8 — The Partnership: Orange Crush as a founding Power 25 partner." loading="lazy"></figure>
+  <figure class="slide"><img src="slides/09.png" alt="Slide 9 — Let's Talk: Ready to make Orange Crush a founding Power 25 partner." loading="lazy"></figure>
+</main>
+<footer>
+  <span>Brandlete · <a href="https://www.brandlete.com">brandlete.com</a></span>
+  <span><a href="https://decks.makeacompany.ai/">More decks</a></span>
+</footer>
 </body>
 </html>
