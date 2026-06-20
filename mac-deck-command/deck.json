@@ -1,90 +1,77 @@
 {
   "slug": "mac-deck-command",
-  "title": "MaC competes by orchestrating, not cloning",
-  "subtitle": "A Slack-thread conversation that became a v1 product spec in 40 minutes.",
+  "title": "MaC can compete with Gamma and Figma now.",
+  "subtitle": "Last week we said we wouldn't build our own versions. Then we did. Then we shipped one that beat Gamma's output on the same brief.",
   "tone": "pitch",
-  "date": "2026-06-13",
+  "date": "2026-06-20",
   "slides": [
     {
-      "title": "The question we started with",
+      "title": "The reversal.",
       "bullets": [
-        "Can MaC compete with Figma, Lovable, and Gamma by building our own versions?",
-        "Yes technically. No strategically. Here's why."
+        "A week ago, the answer was: don't compete head-on. Orchestrate. Use Figma when Figma's right, Gamma when Gamma's faster.",
+        "This week, the answer changed. We can compete head-on. The polished Brandlete x Orange Crush deck rendered through MaC is sharper than what Gamma gave us on the same brief.",
+        "Same pitch. Same brand. Two surfaces. The MaC surface wins."
       ]
     },
     {
-      "title": "MaC is not a tool. MaC is the operator.",
+      "title": "What changed: deck-polish.",
       "bullets": [
-        "Figma, Lovable, and Gamma each spent years optimizing one workflow with one UI.",
-        "If MaC ships MaC's Figma, MaC becomes a worse Figma.",
-        "The pitch dilutes the second we become four products instead of one operator."
+        "A new MaC skill. Density rules, hierarchy, color, typography, imagery, logos, full Brandlete brand kit baked in.",
+        "Goes from brief to hosted HTML deck to PDF, end-to-end, without leaving Slack.",
+        "Renders at the quality bar of a designer-built Gamma deck, in the time it takes to type the brief."
       ],
       "quote": {
-        "text": "MaC uses Figma when Figma's the right call, ships HTML when HTML's the right call, fires up Gamma when a deck is faster.",
-        "author": "Ross"
-      }
-    },
-    {
-      "title": "Find the seams. Build the wedge.",
-      "bullets": [
-        "Don't compete head-on with point tools.",
-        "Find the moments where the existing tools annoy MaC users.",
-        "Build the narrow slice that closes the gap and makes the existing tools more valuable, not less."
-      ]
-    },
-    {
-      "title": "The wedge: /deck",
-      "bullets": [
-        "Type /deck pitch in any Slack thread. Get back a hosted deck and a PDF.",
-        "The brief is the thread. We skip the four steps Gamma makes you take.",
-        "Demoable in the same channel where it was built."
-      ],
-      "quote": {
-        "text": "Watch this Slack conversation become a deck in 30 seconds.",
-        "author": "Ross"
-      }
-    },
-    {
-      "title": "Decisions locked at trigger time",
-      "bullets": [
-        "No footer branding. The shared URL looks like the operator made it.",
-        "Any Slack workspace MaC is installed in. No pilot gating.",
-        "Operator picks tone at trigger time: /deck pitch or /deck doc."
-      ]
-    },
-    {
-      "title": "v1 shipped in 2 hours. v0 demo is this page.",
-      "bullets": [
-        "Engine: thread to deck JSON via Claude. Half a day.",
-        "Renderer: HTML template plus per-deck slug on Cloudflare Pages. Reuses the coultonventures-site stack.",
-        "PDF: headless Chromium pass over the HTML. Few hours.",
-        "Slack command wiring: harness already handles slash commands. Half a day."
-      ],
-      "quote": {
-        "text": "Build v1.",
+        "text": "Time to wire a new SKILL — polished decks, proper logos, imagery, formatting, best practices engrained.",
         "author": "John"
       }
     },
     {
-      "title": "Side by side with Gamma. Same pitch.",
+      "title": "Side by side. Same pitch.",
       "bullets": [
         "Gamma rendered the Brandlete x Orange Crush pilot pitch in 9 slides over four prompts.",
-        "/deck rendered the same pitch from one Slack conversation. Hosted at decks.makeacompany.ai/brandlete-orange-crush/.",
-        "Same story. Two aesthetics. Operator picks the surface, not the tool."
+        "MaC rendered the same 9 slides from one Slack conversation, with custom imagery, brand-correct palette, and a clean CTA replacing the partner contact card.",
+        "Live at decks.makeacompany.ai/brandlete-orange-crush/."
       ],
       "quote": {
-        "text": "See it live: decks.makeacompany.ai/brandlete-orange-crush/",
-        "author": "live"
+        "text": "It's better than what Gamma made us.",
+        "author": "John"
       }
     },
     {
-      "title": "The bet behind /deck.",
+      "title": "What MaC ships now, end to end.",
       "bullets": [
-        "Polish tools optimize the slide. /deck optimizes the path from thought to slide.",
-        "Gamma's loop: open Gamma, type a prompt, edit, export, share.",
-        "/deck's loop: have the conversation, type /deck, share the URL.",
-        "The deck wasn't the work. The thinking was. /deck just ships the thinking, dressed up."
+        "/deck — turn any Slack thread into a hosted deck in 30 seconds. The wedge.",
+        "deck-polish — render investor-grade decks with a real brand system, hero imagery, and a host URL. The polish.",
+        "Both ship to decks.makeacompany.ai. Both look like the operator made them, not the platform."
       ]
+    },
+    {
+      "title": "Why this is the real moat.",
+      "bullets": [
+        "Gamma optimizes one workflow. Figma optimizes one workflow. Lovable optimizes one workflow.",
+        "MaC optimizes the operator. Same operator now ships the deck, the brand assets, the landing page, the DNS, the Slack rollout — without changing tools.",
+        "The point tools win on depth in one box. MaC wins on the path across all the boxes."
+      ]
+    },
+    {
+      "title": "What this unlocks.",
+      "bullets": [
+        "Pitch deck for a founder. Sales deck for a partner. Investor deck for a round. All from a Slack thread.",
+        "Brand systems for new clients. Define the palette once, render every artifact (deck, landing, social) against it.",
+        "The deck stops being a chore between the conversation and the close. It becomes a side effect of the conversation."
+      ]
+    },
+    {
+      "title": "Proof, in production.",
+      "bullets": [
+        "Brandlete x Orange Crush pitch — decks.makeacompany.ai/brandlete-orange-crush/",
+        "Built tonight, in Slack, by Ross and John. From transcript to hosted, polished deck.",
+        "If you're reading this on decks.makeacompany.ai, you're already inside the proof. This page is a MaC-rendered deck too."
+      ],
+      "quote": {
+        "text": "We now can compete with Gamma and Figma.",
+        "author": "John"
+      }
     }
   ]
 }
